@@ -9,7 +9,7 @@ server.use(express.static(__dirname));
 
 
 server.get('/', function(request, response) {
-  response.sendFile('line.html');
+  response.sendFile(__dirname + '/line.html');
 });
 
 server.listen(server.get('port'), function() {
