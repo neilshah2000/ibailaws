@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Ibai Line</title>
+    <link rel="stylesheet" type="text/css" href="..\styles\line.css" />
+    <script src="../scripts/d3.js"></script> 
+    <script src="../scripts/angular.min.js"></script>
+    
+    <script src="../services/lawService.js"></script>
+    <script src="../controllers/lineController.js"></script> <!--service has to come before controller-->
+</head>
+
+<body>
+    <div ng-app="lineModule" id='container'>
+        <div ng-controller="lineController">
+            {{ greeting }}
+            {{ test }}
+            <!-- {{ laws  }} -->
+            <table>
+	            <thead>
+	            	<tr>
+	            		<th ng-repeat='property in lawProperties'>{{property}}</th>
+	            	</tr>
+	            </thead>
+	            <tbody>
+	            	<tr ng-repeat='law in laws'>
+	            		<td ng-repeat='property in lawProperties'><div>{{law[property]}}</div></td>
+	            	</tr>
+	            </tbody>
+        	</table>
+        </div>
+
+    </div>
+        <div id='timeline'>
+            <h3>
+      Law Dates
+    </h3>
+        </div>
+        <div id='venn'>
+            <h3>
+      Conditions of Existance
+    </h3>
+            <h4>
+      Total Laws
+    </h4>
+        </div>
+    </div>
+</body>
+
+</html>

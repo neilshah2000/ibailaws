@@ -1,0 +1,66 @@
+<!-- <html ng-app>
+  <head>
+    <script type="text/javascript" src="angular.min.js"></script>
+    <script type="text/javascript">
+      var myApp = angular.module('myApp',[]);
+
+      myApp.controller('GreetingController', ['$scope', function($scope) {
+        $scope.greeting = 'Hola!';
+      }]);
+    </script>
+  </head>
+  <body>
+    <div ng-controller='GreetingController'>
+      <p>{{greeting.text}}, World</p>
+    </div>
+  </body>
+</html> -->
+
+<!DOCTYPE html>
+<html>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<script>
+angular.module('lineModule', [])
+.controller('lineController', ['$scope', function($scope) {
+    $scope.greeting = 'Hola!';
+    $scope.data;
+    $scope.test = ['test value', 'another val', 'val three']
+  function getcsv(){
+
+  }
+  getcsv();
+}]);
+</script>
+<body>
+
+<div ng-app="lineModule" id='container'>
+        <div ng-controller="lineController">
+            {{ greeting }}
+            {{ dataVal }}
+            {{ test }}
+            <div ng-repeat='d in test'>
+                {{d}}
+            </div>
+            <div ng-repeat='d in dataVal'>
+                {{d.validity}}
+            </div>
+        </div>
+
+    </div>
+        <div id='timeline'>
+            <h3>
+      Law Dates
+    </h3>
+        </div>
+        <div id='venn'>
+            <h3>
+      Conditions of Existance
+    </h3>
+            <h4>
+      Total Laws
+    </h4>
+        </div>
+    </div>
+
+</body>
+</html>

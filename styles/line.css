@@ -1,0 +1,54 @@
+div.bar {
+	display: inline-block;
+	width: 20px;
+	height: 75px;
+	background-color: teal;
+}
+
+svg {
+	margin: 10px;
+	margin-right: 100px
+}
+
+.axis path,
+.axis line {
+	fill: none;
+	stroke: black;
+	shape-rendering: crispEdges;
+}
+
+#container{
+	display: flex;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+th {
+	text-align: left;
+	border: 1px solid black;
+	background-color: darkgrey;
+}
+
+td {
+	border: 1px solid black;
+}
+
+td div{
+	max-height: 25px;
+	overflow: scroll;
+}
+
+/*tr:nth-of-type(odd){
+	background-color: yellow;
+}*/
+
+tr:nth-of-type(even){
+	background-color: lightgrey;	
+}
+
+
+
+
+
